@@ -42,7 +42,7 @@ func main() {
 		}
 		defer inputFile.Close()
 
-        outputFile, err := os.Create(fmt.Sprintf("%v.vm", file[:len(file)-5]))
+        outputFile, err := os.Create(fmt.Sprintf("%v_.vm", file[:len(file)-5]))
         if err != nil {
             log.Fatalln(err)
         }
