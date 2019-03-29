@@ -66,7 +66,6 @@ func (ce *compilationEngine) CompileClass() {
 		ce.CompileSubroutine()
 	}
 	ce.writeSymbol() // "}"
-	ce.showTableOfClass()
 }
 
 func (ce *compilationEngine) CompileClassVarDec() {
@@ -139,7 +138,6 @@ func (ce *compilationEngine) CompileSubroutine() {
 
 	ce.CompileStatements()
 	ce.writeSymbol() // "}"
-	ce.showTableOfSubroutine()
 }
 
 func (ce *compilationEngine) CompileParameterList() {
@@ -371,7 +369,6 @@ func (ce *compilationEngine) CompileExpressionList() {
 
 	ce.CompileExpression()
 	numOfExpr++
-	fmt.Println(numOfExpr)
 
 	for {
 		// No more expression exist, return
@@ -383,7 +380,6 @@ func (ce *compilationEngine) CompileExpressionList() {
 		ce.writeSymbol()
 		ce.CompileExpression()
 		numOfExpr++
-		fmt.Println(numOfExpr)
 	}
 }
 
