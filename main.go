@@ -55,11 +55,11 @@ func main() {
 
 func getArg(names []string) string {
 	if len(names) <= 1 {
-		log.Fatalln("Arguments get error: No arg is gotten")
+		log.Fatalln("Arguments get error: No arg is given")
 	} else if len(names) == 2 {
 		return names[1]
 	} else {
-		log.Fatalln("Arguments get error: Too many arguments is gotten")
+		log.Fatalln("Arguments get error: Too many arguments are given")
 	}
 	return ""
 }
